@@ -15,11 +15,14 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in {
     homeConfigurations = {
+
+      # Bender
       "bender" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [ ./bender ];
       };
 
+      # Vegapunk
       "vegapunk" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [ ./vegapunk ];
