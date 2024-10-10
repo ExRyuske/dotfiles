@@ -7,7 +7,7 @@
     ../../modules/amd.nix
     ../../modules/desktop
     ../../modules/desktop-environment/gnome.nix
-    ../../modules/desktop/gaming.nix
+#    ../../modules/desktop/gaming.nix
   ];
 
   # Network
