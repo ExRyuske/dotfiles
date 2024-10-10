@@ -36,14 +36,13 @@
       "networkmanager"
       "gamemode"
       "libvirtd"
-      "openrazer"
     ];
   };
 
   # Packages
   environment.systemPackages = with pkgs; [
     librewolf
-    citrix_workspace
+    #citrix_workspace
     _64gram
     krita
     nomacs
