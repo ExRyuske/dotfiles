@@ -30,6 +30,7 @@
 
     # Git
     git = {
+      enable = true;
       userName  = "Ryuunosuke Example";
       userEmail = "exryuske@proton.me";
     };
