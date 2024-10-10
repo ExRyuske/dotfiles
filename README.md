@@ -1,6 +1,6 @@
 ### Install
 ```
-curl https://raw.githubusercontent.com/ExRyuske/dotfiles/refs/heads/main/script.sh | sh -s hostname
+curl https://raw.githubusercontent.com/ExRyuske/dotfiles/refs/heads/main/script.sh | sh -s hostname install
 ```
 
 | **Hostname**          | **Description**                   |
