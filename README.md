@@ -1,6 +1,6 @@
 ### Install
 ```
-curl https://raw.githubusercontent.com/ExRyuske/dotfiles/refs/heads/main/install.sh | sh -s hostname
+curl https://raw.githubusercontent.com/ExRyuske/dotfiles/refs/heads/main/script.sh | sh -s hostname
 ```
 
 | **Hostname**          | **Description**                   |
@@ -14,6 +14,7 @@ curl https://raw.githubusercontent.com/ExRyuske/dotfiles/refs/heads/main/install
 | **Aliases**           | **Description**                   |
 | --------------------- | --------------------------------- |
 | `mgp`                 | Fast Git Push                     |
+| `mhi`                 | Install Home Manager              |
 | `mnu`                 | Update and Upgrade System         |
 | `mhu`                 | Update and Upgrade Home Manager   |
 

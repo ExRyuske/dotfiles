@@ -53,5 +53,6 @@
     vscode
     easyeffects
     gh
+    nekoray
   ];
 }
