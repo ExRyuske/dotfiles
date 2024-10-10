@@ -15,6 +15,9 @@
     sessionVariables.NIXOS_OZONE_WL = "1";
 
     # Packages
-    systemPackages = with pkgs; [ brave ];
+    systemPackages = with pkgs; [
+      brave
+      librewolf
+    ];
   };
 }

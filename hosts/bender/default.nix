@@ -41,7 +41,6 @@
 
   # Packages
   environment.systemPackages = with pkgs; [
-    librewolf
     citrix_workspace
     _64gram
     krita

@@ -32,7 +32,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           disko.nixosModules.disko
-          jovian.nixosModules.jovian
+#          jovian.nixosModules.jovian
           ./hosts/jovian
         ];
       };
