@@ -15,7 +15,7 @@
       "Pictures/Wallpaper/wallpaper.jpg".source = ./wallpaper.jpg;
 
       # 64Gram
-      ".share/64Gram/tdata/shortcuts-custom.json".source = ./64Gram/tdata/shortcuts-custom.json;
+      ".local/share/64Gram/tdata/shortcuts-custom.json".source = ./64Gram/tdata/shortcuts-custom.json;
     };
   };
 
