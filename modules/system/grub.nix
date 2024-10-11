@@ -4,7 +4,7 @@
     efi.canTouchEfiVariables = true;
     grub = {
       enable = true;
-      device = [ "nodev" ];
+      device = "nodev";
       efiSupport = true;
       useOSProber = true;
     };
