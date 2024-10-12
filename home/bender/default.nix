@@ -24,6 +24,9 @@
     # Easy Effects
     "easyeffects/input/ExRyuske.json".source = ./easyeffects/input/ExRyuske.json;
     "easyeffects/output/ExRyuske.json".source = ./easyeffects/output/ExRyuske.json;
+
+    # MangoHud
+    "MangoHud/MangoHud.conf".source = ./MangoHud/MangoHud.conf;
   };
 
   programs = {
