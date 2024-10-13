@@ -41,7 +41,6 @@
 
   # Packages
   environment.systemPackages = with pkgs; [
-    gpu-screen-recorder-gtk
     citrix_workspace
     _64gram
     krita
