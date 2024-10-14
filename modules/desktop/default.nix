@@ -18,7 +18,7 @@
     systemPackages = with pkgs; [
       brave
       librewolf
-      p7zip-full
+      p7zip
     ];
   };
 }
