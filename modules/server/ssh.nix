@@ -1,10 +1,3 @@
-{ inputs, pkgs, ... }: {
-  services.openssh = {
-    enable = true;
-    settings = {
-      PasswordAuthentication = true;
-      KbdInteractiveAuthentication = true;
-      PermitRootLogin = "yes";
-    };
-  };
+{ # https://wiki.nixos.org/wiki/SSH_public_key_authentication
+  services.openssh.enable = true;
 }

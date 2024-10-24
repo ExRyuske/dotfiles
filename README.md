@@ -1,4 +1,4 @@
-### Install
+## Install
 ```
 curl https://raw.githubusercontent.com/ExRyuske/dotfiles/refs/heads/main/script.sh | sh -s hostname install
 ```
@@ -6,17 +6,11 @@ curl https://raw.githubusercontent.com/ExRyuske/dotfiles/refs/heads/main/script.
 | **Hostname**          | **Description**                   |
 | --------------------- | --------------------------------- |
 | `bender`              | Main PC                           |
-| `jovian`              | Steam Deck LCD                    |
 | `anton`               | Packard Bell TE69KB               |
-| `vegapunk`            | Virtual Machine                   |
-
 
 | **Aliases**           | **Description**                   |
 | --------------------- | --------------------------------- |
-| `mgp`                 | Fast Git Push                     |
-| `mhi`                 | Install Home Manager              |
 | `mnu`                 | Update and Upgrade System         |
-| `mhu`                 | Update and Upgrade Home Manager   |
 
 ## Launch Options
 All Games
@@ -32,6 +26,3 @@ mangohud --dlsym gamemoderun WINEDLLOVERRIDES="OnlineFix64=n;SteamOverlay64=n;wi
 ## Tips & Tricks
 Online-Fix - https://www.reddit.com/r/LinuxCrackSupport/comments/1cw7v8j/onlinefix_a_complete_guide_to_running_games_with/
 
-GTA V error 134 - https://www.reddit.com/r/SteamDeck/comments/1awzm24/gta_v_error_134_heroic/
-
-CS 2 no sound - https://www.reddit.com/r/linux_gaming/comments/16uc01e/comment/k2larum/

@@ -1,22 +1,16 @@
-{ inputs, pkgs, ... }: {
+{ # https://wiki.nixos.org/wiki/Steam https://wiki.nixos.org/wiki/GameMode
   programs = {
-
-    # GameMode
-    gamemode.enable = true;
-
-    # Steam
     steam = {
       enable = true;
       extraCompatPackages = with pkgs; [ proton-ge-bin ];
     };
-  };
 
-  # Packages
+    gamemode.enable = true;
+  };
+  
   environment.systemPackages = with pkgs; [
-    prismlauncher
-    heroic
-    goverlay
     mangohud
-    steamguard-cli
+    heroic
+    prismlauncher
   ];
 }

@@ -1,6 +1,5 @@
-{ inputs, pkgs, ... }: {
+{ # https://wiki.nixos.org/wiki/Dual_Booting_NixOS_and_Windows
   boot.loader = {
-    timeout = 1;
     efi.canTouchEfiVariables = true;
     grub = {
       enable = true;

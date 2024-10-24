@@ -1,7 +1,6 @@
-{ inputs, pkgs, ... }: {
+{ # https://wiki.nixos.org/wiki/Git
   programs.git = {
     enable = true;
-    package = pkgs.gitFull;
     config = {
       credential.helper = "libsecret";
       push.autoSetupRemote = true;

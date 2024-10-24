@@ -1,4 +1,4 @@
-{
+{ # https://wiki.nixos.org/wiki/Disko
   disko.devices.disk.main = {
     device = "/dev/vda";
     type = "disk";
@@ -6,27 +6,21 @@
       type = "gpt";
       partitions = {
         ESP = {
-          size = "1G";
           type = "EF00";
+          size = "1G";
           content = {
             type = "filesystem";
             format = "vfat";
             mountpoint = "/boot";
+            mountOptions = [ "umask=0077" ];
           };
         };
         root = {
-          end = "-8G";
+          size = "100%";
           content = {
             type = "filesystem";
             format = "ext4";
             mountpoint = "/";
-          };
-        };
-        plainSwap = {
-          size = "100%";
-          content = {
-            type = "swap";
-            discardPolicy = "both";
           };
         };
       };

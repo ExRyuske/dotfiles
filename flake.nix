@@ -1,4 +1,4 @@
-{
+{ # https://wiki.nixos.org/wiki/Flakes
   description = "ExRyuske's NixOS";
 
   inputs = {
@@ -7,53 +7,24 @@
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    jovian = {
-      url = "github:Jovian-Experiments/Jovian-NixOS";
+    home-manager = {
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
   };
 
-  outputs = { self, nixpkgs, disko, jovian, ... }@inputs: {
-    nixosConfigurations = {
+  outputs = inputs: rec {
+    nixosConfiguration = {
 
       # Bender
-      bender = nixpkgs.lib.nixosSystem {
+      bender = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          disko.nixosModules.disko
+          inputs.disko.nixosModules.disko
+          inputs.home-manager.nixosModules.home-manager
           ./hosts/bender
-        ];
-      };
-
-      # Jovian
-      jovian = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          disko.nixosModules.disko
-          jovian.nixosModules.jovian
-          ./hosts/jovian
-        ];
-      };
-
-      # Anton
-      anton = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          disko.nixosModules.disko
-          ./hosts/anton
-        ];
-      };
-
-      # Vegapunk
-      vegapunk = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          disko.nixosModules.disko
-          ./hosts/vegapunk
         ];
       };
     };

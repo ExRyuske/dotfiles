@@ -1,33 +1,20 @@
-{ inputs, pkgs, ... }: {
+{
   imports = [
-    ./disko-config.nix
-    ../../hardware-configuration.nix
-    ../../configuration.nix
-    
+    ../../modules/grub.nix
+    ../../modules/git.nix
     ../../modules/amd.nix
-    ../../modules/desktop
-    ../../modules/desktop-environment/kde.nix
-    ../../modules/desktop/virt-manager.nix
+    ./disko.nix
+
+    ../../modules/desktop/distrobox.nix
     ../../modules/desktop/gaming.nix
-    ../../modules/desktop/sunshine.nix
-    ../../modules/desktop/obs.nix
+    ../../modules/desktop/kde.nix
+    ../../modules/desktop/obs-studio.nix
+    ../../modules/desktop/pipewire.nix
+    ../../modules/desktop/virt-manager.nix
   ];
 
-  # Network
   networking.hostName = "bender";
 
-  # SSD with Games
-  fileSystems."/home/exryuske/Games" = {
-    device = "/dev/disk/by-uuid/118d21f9-0738-4b4d-8f40-92276fe55cf2";
-    fsType = "ext4";
-    options = [
-      "users"
-      "nofail"
-      "exec"
-    ];
-  };
-
-  # User
   users.users.exryuske = {
     hashedPassword = "$y$j9T$t1hNl4f8PPpbCKTh2EV881$6f64lp0OxXMlt2zGtP41vhV4cN1eNHo02k1FIDUMpQ5";
     isNormalUser = true;
@@ -39,19 +26,15 @@
     ];
   };
 
-  # Packages
   environment.systemPackages = with pkgs; [
-    citrix_workspace
-    _64gram
+    librewolf
     krita
     nomacs
-    qbittorrent
-    upscayl
     vesktop
+    telegram-desktop
+    qbittorrent
     vlc
-    vscode
     easyeffects
-    gh
     nekoray
   ];
 }

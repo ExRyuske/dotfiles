@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }: {
+{ # https://wiki.nixos.org/wiki/PipeWire
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -9,10 +9,7 @@
       support32Bit = true;
     };
 
-    # Low-Latency Setup
     extraConfig = {
-
-      # PipeWire
       pipewire."92-low-latency" = {
         "context.properties" = {
           "default.clock.rate" = 48000;
@@ -22,7 +19,6 @@
         };
       };
 
-      # PulseAudio
       pipewire-pulse."92-low-latency" = {
         "context.properties" = [
           {

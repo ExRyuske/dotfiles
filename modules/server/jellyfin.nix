@@ -1,10 +1,9 @@
-{ inputs, pkgs, ... }: {
+{ # https://wiki.nixos.org/wiki/Jellyfin
   services.jellyfin = {
     enable = true;
     openFirewall = true;
   };
 
-  # Packages
   environment.systemPackages = with pkgs; [
     jellyfin
     jellyfin-web

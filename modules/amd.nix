@@ -1,13 +1,11 @@
-{ inputs, pkgs, ... }: {
+{ # https://wiki.nixos.org/wiki/AMD_GPU
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
 
-    # OpenCL
     extraPackages = with pkgs; [ rocmPackages.clr.icd ];
   };
 
-  # HIP
   systemd.tmpfiles.rules = 
   let
     rocmEnv = pkgs.symlinkJoin {
