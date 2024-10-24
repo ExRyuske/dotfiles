@@ -1,4 +1,4 @@
-{ # https://wiki.nixos.org/wiki/Disko
+{
   disko.devices.disk.main = {
     device = "/dev/vda";
     type = "disk";
