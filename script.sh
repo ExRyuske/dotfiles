@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ "$1" = "bender"  ] || [ "$1" = "anton"  ]; then
+if [ "$1" = "bender"  ] || [ "$1" = "anton"  ] || [ "$1" = "vegapunk" ]; then
     if [ "$2" = "install" ]; then
         echo "1"
         nix-shell -p git --command "git clone https://github.com/ExRyuske/dotfiles.git && exit"
