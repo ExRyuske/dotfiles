@@ -13,27 +13,27 @@
     };
   };
 
-  outputs = inputs: rec {
+  outputs = { self, nixpkgs, disko, home-manager, ... }@inputs: {
     nixosConfiguration = {
 
       # Bender
-      bender = inputs.nixpkgs.lib.nixosSystem {
+      bender = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          inputs.disko.nixosModules.disko
-          inputs.home-manager.nixosModules.home-manager
+          disko.nixosModules.disko
+          home-manager.nixosModules.home-manager
           ./hosts/bender
         ];
       };
 
       # Vegapunk
-      vegapunk = inputs.nixpkgs.lib.nixosSystem {
+      vegapunk = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          inputs.disko.nixosModules.disko
-          inputs.home-manager.nixosModules.home-manager
+          disko.nixosModules.disko
+          home-manager.nixosModules.home-manager
           ./hosts/vegapunk
         ];
       };
