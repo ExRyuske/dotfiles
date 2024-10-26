@@ -14,7 +14,7 @@
   };
 
   outputs = { self, nixpkgs, disko, home-manager, ... }@inputs: {
-    nixosConfiguration = {
+    nixosConfigurations = {
 
       # Bender
       bender = nixpkgs.lib.nixosSystem {
