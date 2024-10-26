@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }: { # https://wiki.nixos.org/wiki/Steam
+{ inputs, config, pkgs, lib, ... }: { # https://wiki.nixos.org/wiki/Steam
   programs = {
     steam = {
       enable = true;

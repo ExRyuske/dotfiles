@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }: { # https://wiki.nixos.org/wiki/Podman
+{ inputs, config, pkgs, lib, ... }: { # https://wiki.nixos.org/wiki/Podman
   virtualisation = {
     containers.enable = true;
     podman = {

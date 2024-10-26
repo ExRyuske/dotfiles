@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }: {
+{ inputs, config, pkgs, lib, ... }: {
   imports = [
     ./modules/amd.nix
     ./modules/bash.nix

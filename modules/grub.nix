@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }: { # https://wiki.nixos.org/wiki/Dual_Booting_NixOS_and_Windows
+{ inputs, config, pkgs, lib, ... }: { # https://wiki.nixos.org/wiki/Dual_Booting_NixOS_and_Windows
   boot.loader = {
     efi.canTouchEfiVariables = true;
     grub = {
