@@ -1,4 +1,4 @@
-{ # https://wiki.nixos.org/wiki/KDE
+{ config, pkgs, lib, ... }: { # https://wiki.nixos.org/wiki/KDE
   services = {
     xserver.enable = false;
     desktopManager.plasma6.enable = true;

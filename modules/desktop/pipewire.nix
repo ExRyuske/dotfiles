@@ -1,4 +1,4 @@
-{ # https://wiki.nixos.org/wiki/PipeWire
+{ config, pkgs, lib, ... }: { # https://wiki.nixos.org/wiki/PipeWire
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;

@@ -1,4 +1,4 @@
-{ # https://wiki.nixos.org/wiki/Virt-manager https://wiki.nixos.org/wiki/Libvirt
+{ config, pkgs, lib, ... }: { # https://wiki.nixos.org/wiki/Virt-manager https://wiki.nixos.org/wiki/Libvirt
   virtualisation = {
     libvirtd = {
       enable = true;

@@ -1,4 +1,4 @@
-{ # https://wiki.nixos.org/wiki/Distrobox
+{ config, pkgs, lib, ... }: { # https://wiki.nixos.org/wiki/Distrobox
   virtualisation.podman = {
     enable = true;
     dockerCompat = true;
