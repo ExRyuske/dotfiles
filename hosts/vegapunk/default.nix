@@ -1,7 +1,6 @@
 {
   imports = [
-    ../../modules/grub.nix
-    ../../modules/git.nix
+    ../../configuration.nix
     ./disko.nix
 
     ../../modules/desktop/distrobox.nix
@@ -26,5 +25,14 @@
   };
 
   environment.systemPackages = with pkgs; [
+    librewolf
+    krita
+    nomacs
+    vesktop
+    telegram-desktop
+    qbittorrent
+    vlc
+    easyeffects
+    nekoray
   ];
 }

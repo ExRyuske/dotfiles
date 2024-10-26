@@ -7,6 +7,8 @@ curl https://raw.githubusercontent.com/ExRyuske/dotfiles/refs/heads/main/script.
 | --------------------- | --------------------------------- |
 | `bender`              | Main PC                           |
 | `anton`               | Packard Bell TE69KB               |
+| `vegapunk`            | Virtual Machine                   |
+
 
 | **Aliases**           | **Description**                   |
 | --------------------- | --------------------------------- |

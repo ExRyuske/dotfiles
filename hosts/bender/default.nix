@@ -1,8 +1,6 @@
 {
   imports = [
-    ../../modules/grub.nix
-    ../../modules/git.nix
-    ../../modules/amd.nix
+    ../../configuration.nix
     ./disko.nix
 
     ../../modules/desktop/distrobox.nix
@@ -15,6 +13,7 @@
 
   networking.hostName = "bender";
 
+  # Users
   users.users.exryuske = {
     hashedPassword = "$y$j9T$t1hNl4f8PPpbCKTh2EV881$6f64lp0OxXMlt2zGtP41vhV4cN1eNHo02k1FIDUMpQ5";
     isNormalUser = true;
@@ -26,6 +25,10 @@
     ];
   };
 
+  # Logitech Driving Force
+  hardware.new-lg4ff.enable = true;
+
+  # Packages
   environment.systemPackages = with pkgs; [
     librewolf
     krita
