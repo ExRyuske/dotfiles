@@ -1,7 +1,8 @@
 { config, pkgs, ...}: {
 
-    programs.hyprland = {
+    services.xserver = {
         enable = true;
-        withUWSM = true;
+        displayManager.gdm.enable = true;
+        desktopManager.gnome.enable = true;
     };
 }
