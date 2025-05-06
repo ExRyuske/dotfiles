@@ -2,7 +2,7 @@
 
     environment.systemPackages = with pkgs; [
         brave
-        citrix_workspace
+        #citrix_workspace
         discord
         heroic
         keepassxc
