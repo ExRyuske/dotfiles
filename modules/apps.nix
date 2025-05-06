@@ -11,7 +11,7 @@
         steamtinkerlaunch
         telegram-desktop
         vlc
-        vscode
+        vscodium
     ];
 
     programs = {

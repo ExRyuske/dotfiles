@@ -10,6 +10,6 @@
         ./modules/network.nix
         ./modules/system.nix
         ./modules/user.nix
-        ./modules/video.nix
+        #./modules/video.nix
     ];
 }
