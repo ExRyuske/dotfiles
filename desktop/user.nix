@@ -1,4 +1,4 @@
-{ config, pkgs, ...}: {
+{ config, pkgs, inputs, ...}: {
 
     users.users.yerushka = {
         isNormalUser = true;

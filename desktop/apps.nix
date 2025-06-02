@@ -1,4 +1,4 @@
-{ config, pkgs, ...}: {
+{ config, pkgs, inputs, ...}: {
 
     environment.systemPackages = with pkgs; [
         #citrix_workspace
