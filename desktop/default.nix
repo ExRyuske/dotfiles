@@ -1,15 +1,15 @@
 { config, pkgs, inputs, ...}: {
 
     imports = [
-        ../disko.nix
         ../hardware-configuration.nix
+        ../disko.nix
 
-        ./modules/apps.nix
-        ./modules/audio.nix
-        ./modules/boot.nix
-        ./modules/desktop.nix
-        ./modules/system.nix
-        ./modules/user.nix
-        ./modules/video.nix
+        ./apps.nix
+        ./audio.nix
+        ./boot.nix
+        ./desktop.nix
+        ./system.nix
+        ./user.nix
+        ./video.nix
     ];
 }
