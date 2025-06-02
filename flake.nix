@@ -8,10 +8,11 @@
 
     outputs = { self, nixpkgs, nixpkgs-unstable, disko, ... }@inputs: {
         nixosConfigurations.desktop = nixpkgs-unstable.lib.nixosSystem {
+            system = "x86_64-linux";
             specialArgs = { inherit inputs; };
             modules = [
                 disko.nixosModules.disko
-                ./desktop.nix
+                ./desktop
                 { disko.devices.disk.main.device = nixpkgs-unstable.lib.mkForce "/dev/sda";}
             ];
         };
