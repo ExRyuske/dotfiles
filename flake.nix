@@ -13,6 +13,7 @@
             modules = [
                 disko.nixosModules.disko
                 ./desktop
+                { disko.devices.disk.main.device = nixpkgs-unstable.lib.mkForce "/dev/sda";}
             ];
         };
     };
