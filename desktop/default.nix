@@ -4,10 +4,10 @@
         ../hardware-configuration.nix
         ../disko.nix
 
-        #./apps.nix
-        #./audio.nix
+        ./apps.nix
+        ./audio.nix
         ./boot.nix
-        #./desktop.nix
+        ./desktop.nix
         ./system.nix
         ./user.nix
         ./video.nix
