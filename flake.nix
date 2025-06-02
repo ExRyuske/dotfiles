@@ -11,7 +11,7 @@
             specialArgs = { inherit inputs; };
             modules = [
                 disko.nixosModules.disko
-                ./desktop
+                ./desktop.nix
                 { disko.devices.disk.main.device = nixpkgs-unstable.lib.mkForce "/dev/sda";}
             ];
         };
