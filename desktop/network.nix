@@ -2,6 +2,6 @@
 
     networking = {
         networkmanager.enable = true;
-        hostName = "yerushka";
+        hostName = "exryuske";
     };
 }

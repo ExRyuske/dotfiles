@@ -1,5 +1,7 @@
 { config, pkgs, ...}: {
 
+    boot.kernelPackages = pkgs.linuxPackages_latest;
+
     nix.gc = {
         automatic = true;
         dates = "monthly";
@@ -7,10 +9,16 @@
     };
 
     system = {
-        stateVersion = "24.11";
+        stateVersion = "25.05";
         autoUpgrade = {
             enable = true;
             dates = "weekly";
+            flake = inputs.self.outPath;
+            flags = [
+                "--update-input"
+                "nixpkgs"
+                "--print-build-logs"
+            ];
         };
     };
 
