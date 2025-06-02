@@ -10,9 +10,11 @@
         nixosConfigurations.desktop = nixpkgs-unstable.lib.nixosSystem {
             specialArgs = { inherit inputs; };
             modules = [
+                ./hardware-configuration.nix
                 disko.nixosModules.disko
-                ./desktop
+                ./disko.nix
                 { disko.devices.disk.main.device = nixpkgs-unstable.lib.mkForce "/dev/sda";}
+                ./desktop
             ];
         };
     };
