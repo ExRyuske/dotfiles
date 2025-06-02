@@ -8,7 +8,6 @@
         ./modules/audio.nix
         ./modules/boot.nix
         ./modules/desktop.nix
-        ./modules/network.nix
         ./modules/system.nix
         ./modules/user.nix
         ./modules/video.nix

@@ -4,4 +4,6 @@
         isNormalUser = true;
         extraGroups = [ "wheel" "networkmanager" ];
     };
+
+    networking.hostName = "yerushka";
 }
