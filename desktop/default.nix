@@ -12,4 +12,9 @@
         ./user.nix
         ./video.nix
     ];
+
+    virtualisation.virtualbox.guest = {
+        enable = true;
+        dragAndDrop = true;
+    };
 }
