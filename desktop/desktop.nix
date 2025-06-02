@@ -5,11 +5,7 @@
         desktopManager.gnome.enable = true;
     };
 
-    {
-        environment.gnome.excludePackages = with pkgs; [
-            
-        ];
-    };
+    environment.gnome.excludePackages = with pkgs; [ ];
 
     networking.networkmanager.enable = true;
 }
