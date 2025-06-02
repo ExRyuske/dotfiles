@@ -4,7 +4,7 @@
         ../hardware-configuration.nix
         ../disko.nix
 
-        ./apps.nix
+        #./apps.nix
         ./audio.nix
         ./boot.nix
         ./desktop.nix
