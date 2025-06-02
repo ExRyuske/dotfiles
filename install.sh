@@ -6,4 +6,4 @@ rm ./dotfiles/configuration.nix
 #rm -r ~/dotfiles
 # sudo nix run github:nix-community/disko -- --mode disko /etc/nixos/disko.nix
 sudo nixos-rebuild switch --flake ./dotfiles/nixos#desktop
-reboot
+#reboot
